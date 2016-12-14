@@ -1,17 +1,33 @@
 {
   "name": "sunqqblog",
+  "description": "sunqiquan's blog created by nodejs, it is a test project",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "NODE_ENV=production pm2 start bin/www --node-args='--harmony' --name 'sunqqblog'",
+    "test": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
   },
   "dependencies": {
-    "body-parser": "~1.15.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "ejs": "~2.5.2",
-    "express": "~4.14.0",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "config-lite": "1.5.0",
+    "connect-flash": "0.1.1",
+    "connect-mongo": "1.3.2",
+    "cookie-parser": "1.4.3",
+    "debug": "2.3.3",
+    "ejs": "2.5.2",
+    "express": "4.14.0",
+    "express-formidable": "1.0.0",
+    "express-session": "1.14.2",
+    "express-winston": "2.1.0",
+    "marked": "0.3.6",
+    "mocha": "3.2.0",
+    "moment": "2.17.1",
+    "mongolass": "2.3.3",
+    "objectid-to-timestamp": "1.3.0",
+    "sha1": "1.1.1",
+    "supertest": "2.0.1",
+    "winston": "2.3.0"
+  },
+  "devDependencies": {
+    "istanbul": "0.4.5"
   }
 }
